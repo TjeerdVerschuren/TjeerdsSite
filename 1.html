@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #1a1a1a;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 4px solid #230dbd; /* Updated border color and thickness */
+            padding: 20px;
+            background: #282828;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .controls-box {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .menu-box,
+        .button-box {
+            width: 48%;
+        }
+
+        .slider-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center align the slider */
+            margin-top: 10px; /* Add some top margin */
+        }
+
+        .sound-icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .slider-wrapper {
+            width: 100%; /* Adjusted width for slider wrapper */
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Spacing between icons and slider */
+            position: relative; /* Added position relative */
+            background: #333; /* Moved background color to slider */
+            border-radius: 5px; /* Added border-radius for slider track */
+            height: 15px; /* Added height for slider track */
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: calc(100% - 60px);
+            height: 15px;
+            border-radius: 5px;
+            outline: none;
+            opacity: 1;
+            -webkit-transition: .7s;
+            transition: opacity .2s;
+            background: transparent; /* Changed slider background to transparent */
+            position: relative; /* Added position relative */
+            z-index: 1; /* Added z-index */
+        }
+
+        .slider::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #4CAF50;
+            border-radius: 5px;
+            z-index: -1;
+            transform-origin: left;
+        }
+
+        .slider.reset::before {
+            width: calc((var(--value, 50%) / 100) * 100%);
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+            position: relative;
+            z-index: 2; /* Added z-index */
+            border: 2px solid #333;
+            margin-top: -7.5px;
+        }
+
+        .slider:after {
+            content: "";
+            display: none;
+            position: absolute;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+            color: #fff;
+        }
+
+        select {
+            padding: 8px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: #444;
+            color: #fff;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .toggle-button {
+            padding: 8px;
+            border: none;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .toggle-button.on {
+            background: #FF4500; /* Orange color for On state */
+            color: #fff;
+        }
+
+        .toggle-button.off {
+            background: #4CAF50; /* Green color for Off state */
+            color: #fff;
+        }
+
+        .status {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        .button-label {
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <br>Welpen-<br>Afstandbediening <br>
+        <div class="container">
+            <div class="controls-box">
+                <div class="menu-box">
+                    <label for="Letter">Selecteer een welp:</label>
+                    <select name="Letter" id="Letter" onchange="updateButtonText()">
+                        <option value="Silas">Silas</option>
+                        <option value="Anne">Anne</option>
+                        <option value="Thijs">Thijs</option>
+                        <option value="Eva">Eva</option>
+                        <option value="Fabian">Fabian</option>
+                        <option value="Tess">Tess</option>
+                        <option value="Veere">Veere</option>
+                        <option value="Freek">Freek</option>
+                        <option value="Dunya">Dunya</option>
+                        <option value="Enzo">Enzo</option>
+                        <option value="Kiek">Kiek</option>
+                        <option value="Wies">Wies</option>
+                        <option value="Amber">Amber</option>
+                        <option value="Quinten">Quinten</option>
+                        <option value="Leonie">Leonie</option>
+                        <option value="Dex">Dex</option>
+                        <option value="Lev">Lev</option>
+                        <option value="Niels">Niels</option>
+                        <option value="Mara">Mara</option>
+                        <option value="David">David</option>
+                        <option value="Jack">Jack</option>
+                        <option value="Fenne">Fenne</option>
+                        <option value="Lars">Lars</option>
+                        <option value="Oe">Oe</option> <!-- Updated Jelle to Oe -->
+                        <option value="Gibble">Gibble</option> <!-- Updated Marit to Gibble -->
+                        <option value="Koda">Koda</option> <!-- Updated Anna to Koda -->
+                        <option value="Blu">Blu</option> <!-- Updated Tjeerd to Blu -->
+                    </select>
+                </div>
+
+                <div class="button-box">
+                    <p class="button-label" id="buttonLabel">Silas staat nu:</p>
+                    <!-- Play icon for the "off" state -->
+                    <button class="toggle-button off" onclick="toggleTuning()">
+                        <i class="fa fa-play"></i>
+                    </button>
+                    <div class="status" id="statusLabel">Aan</div>
+                </div>
+            </div>
+
+            <label for="Volume">Volume</label>
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <i class="fa fa-volume-down"></i>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    <i class="fa fa-volume-up"></i>
+                </div>
+            </div>
+        </div>
+    </h1>
+
+    <script>
+        var volumeSlider = document.getElementById('myRange');
+        var sliderValue = document.querySelector('.slider::before');
+        var tuningButton = document.querySelector('.toggle-button');
+
+        volumeSlider.addEventListener('input', function () {
+            this.style.setProperty('--value', this.value);
+            sliderValue.style.width = this.value + '%';
+            updateButtonText();
+        });
+
+        function updateButtonText() {
+            var selectedName = document.getElementById('Letter').value;
+            var buttonLabel = document.getElementById('buttonLabel');
+            var statusLabel = document.getElementById('statusLabel');
+
+            buttonLabel.textContent = selectedName + ' staat nu:';
+            statusLabel.textContent = tuningButton.classList.contains('on') ? 'Uit' : 'Aan';
+        }
+
+        function toggleTuning() {
+            var tuningButton = document.querySelector('.toggle-button');
+            var statusLabel = document.getElementById('statusLabel');
+
+            if (tuningButton.classList.contains('on')) {
+                tuningButton.classList.remove('on');
+                tuningButton.classList.add('off');
+                tuningButton.innerHTML = '<i class="fa fa-play"></i>'; // Switch to play icon
+                statusLabel.textContent = 'Aan';
+            } else {
+                tuningButton.classList.remove('off');
+                tuningButton.classList.add('on');
+                tuningButton.innerHTML = '<i class="fa fa-pause"></i>'; // Switch to pause icon
+                statusLabel.textContent = 'Uit';
+            }
+        }
+
+        function resetSlider() {
+            volumeSlider.value = 50;
+            volumeSlider.dispatchEvent(new Event('input'));
+        }
+
+        document.getElementById('Letter').addEventListener('change', function () {
+            resetSlider();
+        });
+    </script>
+</body>
+
+</html>
