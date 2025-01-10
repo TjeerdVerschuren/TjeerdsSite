@@ -11,6 +11,19 @@
             margin: 0;
             padding: 0;
         }
+        /* Dynamic slider background based on value */
+.slider::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #4CAF50 var(--slider-value, 50%), #333 var(--slider-value, 50%));
+    height: 15px;
+    border-radius: 5px;
+}
+
+.slider::-moz-range-track {
+    background: linear-gradient(to right, #4CAF50 var(--slider-value, 50%), #333 var(--slider-value, 50%));
+    height: 15px;
+    border-radius: 5px;
+}
+
 
         body {
             height: 100vh;
@@ -20,6 +33,8 @@
             align-items: center;
             justify-content: center;
         }
+
+
 
         .container {
             display: flex;
@@ -274,6 +289,21 @@
         document.getElementById('Letter').addEventListener('change', function () {
             resetSlider();
         });
+
+
+        // Update slider background based on value
+        function updateSliderBackground() {
+            var slider = document.getElementById('myRange');
+            var value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+            slider.style.setProperty('--slider-value', value + '%');
+        }
+
+        // Call function when slider value changes
+        document.getElementById('myRange').addEventListener('input', updateSliderBackground);
+
+        // Initialize the slider background on page load
+        window.onload = updateSliderBackground;
+
     </script>
 </body>
 
