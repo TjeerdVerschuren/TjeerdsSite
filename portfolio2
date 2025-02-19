@@ -2,7 +2,7 @@
 <html lang="en-CA">
 <head>
     <title>second portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="TjeerdsSite/style.css">
     <style>
         /* Sticky header with blue bar effect */
         #sticky-header {
