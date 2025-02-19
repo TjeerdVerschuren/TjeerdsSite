@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-CA">
 <head>
-    <title>second portfolio</title>
-    <link rel="stylesheet" href="TjeerdsSite/style.css">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Sticky header with blue bar effect */
         #sticky-header {
@@ -57,35 +57,141 @@
 
     <!-- Sticky header bar with only the title -->
     <div id="sticky-header">
-        <h1>(second) portfolio</h1>
+        <h1>portfolio</h1>
     </div>
 
     <!-- Portfolio navigation buttons -->
     <div class="nav-buttons">
         <a href="index.html" class="button">home</a>
-        <a href="blog.html" class="button">contact</a>
-        <a href="portfolio.html" class="button">portfolio</a>
+        <a href="blog.html" class="button">about me</a>
+        <a href="portfolio.html" class="current button">portfolio</a>
     </div>
 
     <!-- Portfolio Callout Box -->
-    <p>Hello there!<br>
+    <div class="portfolio-callout">
+        <p>Are you Edwin Dertien or Angelika Mader, and/or do you want  <br>to see the portfolio for Mastering Tinkering? Then <a href="portfolio2.html">click here!</a>
+        <br> <br>Otherwise, enjoy the crappy portfolio I have<br> made for and throughout Professional Development :)</p>
+    </div>
 
+    <!-- Portfolio Container -->
+    <div class="portfolio-container">
+        <!-- Portfolio items go here -->
+    </div>
 
-    </p>
 
     <!-- Portfolio container -->
     <div class="portfolio-container">
         <!-- Bee 'n Bee Hotel -->
         <div class="portfolio-item" onclick="togglePortfolioItem(this)">
-            <h2>Title</h2>
+            <h2>Bee 'n Bee Hotel in Blender</h2>
             <div class="portfolio-content">
                 <p><b>Date:</b> 22 - 3 - 2023</p>
-                <p>blablablablablablabla</p>
+                <p>For this module's project, my group and I tackled the issue of the declining bee population. For one of the deliverables, we had to make a lo-fi prototype of
+our product. This included a visualisation of a bee hotel, which I made in blender. The wooden textures were rendered by sticking pictures of pieces of wood
+on meshes, and I am rather satisfied with the end result!</p>
                 <img src="img/Render3.png" width="50%">
             </div>
         </div>
 
+        <!-- Ducks 'n Explosions -->
+        <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+            <h2>Project Ducks 'n Explosions</h2>
+            <div class="portfolio-content">
+                <p><b>Date:</b> 7 - 1 - 2023</p>
+                <p>For the final project of Module 5, we had to make a simple video-game. Me and my friend worked together on our game called Ducks 'n Explosions.
+The game's objective is to rescue a duck who got stuck inside a school and get him outside safely. However, the only means of interacting with
+the game is by throwing bombs and creating explosions, from which the duck will run away. We divided the task in two parts: the design and the technical
+part. I worked on the design part, which includes making all objects and characters in blender, importing and putting them together in Unity and creating the
+sound-effects and music. you can <a href="https://marro.dev/post/ducks-n-explosions">play the game here!</a> </p>
+            </div>
+        </div>
+
+        <!-- Additional portfolio items you provided -->
+        <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+            <h2>Blender Pocketwatch</h2>
+            <div class="portfolio-content">
+                <p><b>Date:</b> 1 - 4 - 2022</p>
+                <p>This module we had the course Interactive Visualisation. We did this
+by following some lectures and by doing the weekly assignments. These showed you the basic knowledge that you needed to work with these
+programs. For the final assignment, you had to make an object in Blender, where you would be graded on how well you met the
+the needed requirements. I decided to make a pocketwatch as my final project, since I though this would be interesting and challenging. I had
+an advantage that I already had some Blender experience from the previous module's ProfDev challenge. I looked up lots and lots of pictures
+of pocketwatches and watched video's on how they technically worked, and manage to make a design that in a way contains some certain aspects
+of a real working pocketwatch. For the materials I looked up online how to make those, and since Blender has a big community, there is always a tutorial
+that explains exactly what you're looking for. The TA's were (if I may say so) quite astonished by my final product: especially the detail and the
+modelling were remarkable according to them. I was rather happy with a 9/10 for my final result!  </p>
+                <img src="img/pocketwatch.png" width="49%">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+            <h2>Video Challenge</h2>
+            <div class="portfolio-content">
+                <p><b>Date:</b> 30 - 3 - 2022</p>
+                <p>For this module's challenge for ProfDev, I wanted to discover more aspects of filmmaking. I already have some skills concerning editing
+and preparation of filmmaking, but I had zero experience with the actual filming. So I followed the two workshops by SolidFocus on Videography
+and Entrepreneurship. During the first workshop we learned about all sort of things, including how to work with a camera, lighting, voice-overs and
+more. I wanted to do something with this knowledge that I had gained, so I decided to make a showcase-video. Firstly, I wanted to make one of our
+project's prototype, where we could talk about what we made and show how it works. The only problem with this was that the prototype would not be finished
+before the ProfDev presentation, so there would be no product to make a video about. I then decided to make a showcase video about my bike. I made it in
+the style of one of those advertising video's for a new phone or car, like it is a completely new product/invention. With a camera and pop-filter I borrowed and the
+newly gained knowledge, I made something quite ridiculous but fun. The end result is shown below.  </p>
+                <video controls width="69%" muted>
+                    <source src="img/TheBike.mp4" type="video/mp4">
+                </video>
+                <p>Music by Coma-Media from Pixabay - Song: This Minimal Technology (Pure)</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+            <h2>Blender Donut</h2>
+            <div class="portfolio-content">
+                <p><b>Date:</b> 22 - 1 - 2022</p>
+                <p>For this module's Professional Development challenge, we had to dive into a topic that we thought to be interesting. I decided to take a look
+into the world that is Blender. Blender is a computer graphics software that people can use for the visualisation of all sorts of
+things: it can be used to make realisticly looking artificial images, animation, games, virtual reality etc. I followed a YouTube tutorial
+by Blender Guru, consisting of 16 video's in which he shows the different tools that Blender provides. During this tutorial he'll show how
+to use those tools to create a realisticly looking Donut. Since Blender is a rather extensive program, the possibilities are limitless and
+you can experience with it all you want. Since it is almost impossible to learn every bit of Blender, this would also be the way to become
+good at it: by getting familiar with the program. </p>
+                <img src="img/donuut.png" width="56%">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+            <h2>Programming: The creature</h2>
+            <div class="portfolio-content">
+                <p><b>Date:</b> 6-10-2021</p>
+                <p>For programming we're currently working on creating "a creature". This can be any
+  type of thing: a penguin, a snail, a collection of hedgehogs, or as in my case:
+  a green blobby monster.
+  I have created something which I am quite proud of: You see a landscape, and after a while
+  a (shy) green blobby creature comes out of the grass. I am planning on adding more: there is going
+  to be a pile of fruit next to him, which you can drag. As a reaction, Blob will open
+  his mouth, and you'll be able to feed him.
+  However, I have come to the conclusion that programming can be very confusing.
+  This sunday I have to hand in the end result of the creature, and I have been struggling very much
+  to get where I am right now, and I don't consider it to be a good enough program yet... However, some people
+  have told me that it looks nice and that Blob is pretty cute, which gives me motivation to work on it.</p>
+                <img src="img/monsterpic1.jpg" alt="blobby when doing nothing" width="500">
+                <img src="img/monsterpic2.jpg" alt="When dragging the apple, blob will open his mouth" width="500">
+            </div>
+        </div>
+
+                <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+                    <h2>The ring</h2>
+                    <div class="portfolio-content">
+                        <p><b>Date:</b> 21-10-2021</p>
+                        <p> I am a big fan of the Lord of the Rings and The Hobbit, and some time ago I thought it would be cool to
+          have a ring of my own. So I made one of a nut I found in the shed. I started with filing it to
+          make it more round, and gave it a shiny surface using very smooth sandpaper. The nut was
+          made out of stainless steel and very tough; this project took me around 20 hours to finish.</p>
+                        <img src="img/ring.JPG" width="30%">
+                        <img src="img/bolt.JPG" width="30%">
+                    </div>
+                </div>
 
     </div>
 </body>
 </html>
+
