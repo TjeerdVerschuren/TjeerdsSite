@@ -203,10 +203,43 @@ a:hover {
 .contact-box p a:hover {
     color: #0088FF;
 }
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+/* Centering the row */
+.row {
+    display: flex;
+    justify-content: center; /* Centers the columns horizontally */
+    align-items: center; /* Aligns images vertically */
+    gap: 20px; /* Adds spacing between images */
+}
+
+/* Ensuring columns adjust properly */
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Responsive Behavior for Smaller Screens */
 @media (max-width: 768px) {
     .contact-box {
         width: 90%; /* Make the boxes take up more space on smaller screens */
     }
+}
+
+/* About Box Styling */
+.about-box {
+    background-color: white;
+    text-align: center;
+    border: 2px solid #230DBD;
+    border-radius: 10px;
+    width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-box p {
+    text-align: left;
+    text-align: center;
+    font-size: 1.2em;
 }
