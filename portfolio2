@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <title>second portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sticky header with blue bar effect */
+        #sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #230DBD;
+            /* border-bottom: 3px solid blue; */
+            transition: top 0.06s ease;
+            z-index: 1000;
+        }
+
+        #sticky-header h1 {
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Blue bar that remains at the top */
+        #blue-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            /* background-color: blue; */
+            z-index: 999;
+        }
+    </style>
+    <script>
+        // Function to toggle the expansion of portfolio items
+        function togglePortfolioItem(element) {
+            element.classList.toggle("expanded");
+        }
+
+        // JavaScript to handle the header moving up and leaving a blue bar
+        window.onscroll = function() {moveHeaderOnScroll()};
+
+        function moveHeaderOnScroll() {
+            var header = document.getElementById("sticky-header");
+            var scrollDistance = window.pageYOffset;
+            var maxMove = 90; // Adjust this value for how much the header should move up
+            var newTop = -Math.min(scrollDistance, maxMove);
+            header.style.top = newTop + "px";
+        }
+    </script>
+</head>
+<body>
+    <!-- Thin blue bar that stays at the top -->
+    <div id="blue-bar"></div>
+
+    <!-- Sticky header bar with only the title -->
+    <div id="sticky-header">
+        <h1>(second) portfolio</h1>
+    </div>
+
+    <!-- Portfolio navigation buttons -->
+    <div class="nav-buttons">
+        <a href="index.html" class="button">home</a>
+        <a href="blog.html" class="button">contact</a>
+        <a href="portfolio.html" class="button">portfolio</a>
+    </div>
+
+    <!-- Portfolio Callout Box -->
+    <p>Hello there!<br>
+
+
+    </p>
+
+    <!-- Portfolio container -->
+    <div class="portfolio-container">
+        <!-- Bee 'n Bee Hotel -->
+        <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+            <h2>Title</h2>
+            <div class="portfolio-content">
+                <p><b>Date:</b> 22 - 3 - 2023</p>
+                <p>blablablablablablabla</p>
+                <img src="img/Render3.png" width="50%">
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
