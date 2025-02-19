@@ -1,29 +1,212 @@
-vorig jaar zat piev bij de bevers
-episch, maar het werkte niet met d'r team
-gwn geen klik en ja wat je zaterdag dus vertelde
-en ik moet eerlijk zijn, ik snap dat wel
-anyways, je wilde naar een ander team
-maar esta's zijn de esta's, hokabo wilde je niet vanwege het team ofzo en omdat je nog niet weet-ik-veel-hoeveel jaren ervaring had, mocht je daarom niet bij de padvinders of verkenners
-dus je wilde bij de Sint Joris
-maar okay hier wordt het complicated
-want ik weet niet exact wat er tijdens de gesprekken is gebeurd en wat er waar is en wat niet
-maar goed
-je vertelde dus dat je je wel wilde ontwikkelen
-maar de sint joris had nee gezegd
-als je geinteresseerd bent: hier zijn de redenen die ik heb gehoord
-En dit is gwn wat ik had gehoord, so don't get ur slokdarm in a twist
-1. wij kregen al twee nieuwe leiding, en als we drie nieuwe zouden krijgen, zou dat moeilijk zijn omdat je dan drie nieuwe leiding moet gaan opleiden terwijl wij ook zelf een nieuw dynamiek moeten vinden en yeh. Ik dacht zo van Hmmm hoeveel moeilijker is het nou om drie extra leiding erbij te krijgen qua opleiding? Het is niet echt alsof je iets verliest door iemand extra te hebben. 
-2. Je vertelde dat je niet echt zeker wist of je leiding zijn nog wel leuk ging vinden. Dit is iets wat ik had gehoord, maar de reden wrm ik twijfels had over dit als reden hebben en dit aan te nemen, was omdat ik dacht dat dit gebaseerd was op je ervaring bij de bevers. Ik dacht: zet d'r bij een nieuw team en motivatie kan weer terugkeren! 
-3. Je had maar een keer meegekeken, en dat was tijdens een opkomst dat niet eens iedereen die er volgend jaar zouden zijn (sjors, marit en ik), er waren. 
-4. dit was vanuit mij: ik was bang dat als je met een goeie makker samen in een team komt, dit je band kan aanpassen. Beetje alsof je gaat samenwonen met je beste vriend: een makker van school had mij vorig jaar dus ook gevraagd om samen te wonen, maar toen had ik ook nee gezegd, voornamelijk omdat ik bang was dat dit onze vriendschap zou aanpassen (en okay de kamer  was drie keer zo duur als wat ik nu huur). Ja dit gaat raar klinken, maar ik was bang dat samen in een team komen onze makkerschap zou aanpassen. Yes it was selfish. and I'm sorry. 
+/* General Styling */
+body {
+    font-family: 'Patrick Hand', sans-serif; /* More playful font */
+    text-align: center;
+    margin: 0;
+    background-color: #f4f4f9; /* Light background for better contrast */
+}
 
-enige ding is dat ik niet wist dat de uitkomst hiervan nog erger zou zijn. ik dacht namelijk Okay, ze blijft dan bij de bevers voor komend jaar, maar Noor komt daarbij dus misschien wordt het dan leuker!
-Maar dat was dus niet het geval
-toen je zei dat je dus geen team had, was ik shock en had ik merel geappt met Yo wat?
+/* Sticky Header */
+#sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #230DBD;
+    color: white;
+    padding: 0 20px; /* Horizontal padding only */
+    height: 120px; /* Explicit height */
+    line-height: 120px; /* Vertically centers the text */
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Light shadow */
+    /* border-top: 2px solid #ccc; /* Thin border at the top */ */
+    border-bottom: 2px solid #ccc; /* Thin border at the bottom */
+}
 
-Die zei dus dat je idd geen team had, maar zou gaan meekijken bij meerdere teams. Soort van als vliegende leiding. Maar ik had het meer gezien als meedraai leiding, die dan later in het jaar zou aansluiten ergens als ze vaker had meegekeken.
+/* Sticky Header Title */
+#sticky-header h1 {
+    margin: 0;
+    font-size: 2em;
+    line-height: normal; /* Reset line-height for the text */
+    display: inline-block;
+    vertical-align: middle;
+}
 
-Afgelopen zaterdag vertelde lieke hetzelfde: is het een idee om gwn mee te draaien, zoals de explo's doen op dit moment. 
-(Ik vond het wel echt fucking raar dat de explo's zelf wel een schema krijgen en dat het voor hun wordt geregeld, maar dat ze niet aan jou hebben gedacht en niet eens hebben geappt van Hoi wil je dat ook doen? Like dit is gwn zo'n allart dingetje weer) 
-Aan de ene kant snap ik dat, zoals Marit zei, zelf initiatief tonen belangrijk is: maar in dit geval zou dat niet moeten: de allart heeft shit gehandeld en had op z'n minst gwn kunnen vragen of je net als de explo's ook wil meedraaien.
-Maar het andere wat marit zei klopt wel: stel je wil meekijken, dan kan je dat uiteraard gewoon vragen! Stuur een appje naar de teamleid(st)er, of gwn iemand van dat team.
+
+/* Navigation Buttons */
+.nav-buttons {
+    margin-top: 120px; /* Adjusted to prevent overlap */
+    text-align: center;
+    padding: 0; /* Reset any padding if necessary */
+    width: 100%; /* Make sure it takes up the full width */
+}
+
+
+.button {
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 15px;
+    padding: 12px 24px;
+    background-color: #3332E0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Ensure text is centered */
+}
+
+
+.button:hover {
+    background-color: #0088FF;
+}
+
+/* Lighter blue when pressed */
+.button:active {
+    background-color: #4F4DE6;
+}
+
+/* Darker blue for current page */
+.button.current {
+    background-color: #2A29C4;
+}
+
+/* Portfolio Callout Box */
+.portfolio-callout {
+    background-color: #E53935; /* Red-ish color */
+    color: white;
+    padding: 20px;
+    margin: 20px 0; /* Space around the box */
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.portfolio-callout a {
+    color: #FFEB3B; /* Yellow color for the link */
+    text-decoration: underline;
+}
+
+.portfolio-callout a:hover {
+    color: #FFF59D; /* Slightly lighter yellow when hovering */
+}
+
+/* Portfolio Item Styling */
+.portfolio-item {
+    width: 50%; /* Default width for larger screens */
+    background-color: #ffffff; /* White background like the contact boxes */
+    padding: 20px; /* Same padding as the contact boxes */
+    border: 2px solid #ccc; /* Light border around the portfolio item */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin: 10px 0; /* Space between the items */
+    min-width: 300px; /* Prevent shrinking below this width */
+}
+
+/* Portfolio Container Styling */
+.portfolio-container {
+    display: flex; /* Use flexbox to arrange items */
+    flex-wrap: wrap; /* Ensure items wrap onto the next line on smaller screens */
+    justify-content: center; /* Center the items horizontally */
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+/* Portfolio Title and Content Styling */
+.portfolio-item h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.portfolio-item p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Responsive Behavior: Stacking items on smaller screens */
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 100%; /* Make items full-width on smaller screens */
+    }
+}
+
+
+
+.portfolio-item.expanded {
+    width: 75%;
+    transform: translateX(0);
+}
+
+.portfolio-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.portfolio-item.expanded .portfolio-content {
+    display: block;
+}
+
+/* General Text Styling */
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    max-width: 75%; /* Limits the width of the paragraph to 75% */
+margin: 0 auto; /* Centers the paragraph horizontally */
+
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+/* Contact Box Styling */
+.contact-box {
+    width: 40%; /* Make the boxes slightly less wide */
+    background-color: #ffffff; /* White background like the portfolio boxes */
+    padding: 15px; /* Reduced padding for a more compact look */
+    border: 2px solid #ccc; /* Light border around the contact box */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    margin: 10px 10px; /* Reduced margin to bring the boxes closer together */
+}
+
+/* Contact Container Styling */
+.contact-boxes {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the boxes horizontally */
+    flex-wrap: wrap; /* Allow the boxes to wrap on smaller screens */
+    padding: 20px;
+}
+
+/* Styling for Contact Box Titles */
+.contact-box h4 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Styling for Contact Box Links */
+.contact-box p a {
+    font-size: 1.1em;
+    color: #230DBD;
+    text-decoration: underline;
+}
+
+.contact-box p a:hover {
+    color: #0088FF;
+}
+
+/* Responsive Behavior for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-box {
+        width: 90%; /* Make the boxes take up more space on smaller screens */
+    }
+}
