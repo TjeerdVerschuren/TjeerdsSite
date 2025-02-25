@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <title>reflection</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sticky header with blue bar effect */
+        #sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #230DBD;
+            /* border-bottom: 3px solid blue; */
+            transition: top 0.06s ease;
+            z-index: 1000;
+        }
+
+        #sticky-header h1 {
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Blue bar that remains at the top */
+        #blue-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            /* background-color: blue; */
+            z-index: 999;
+        }
+    </style>
+    <script>
+        // Function to toggle the expansion of portfolio items
+        function togglePortfolioItem(element) {
+            element.classList.toggle("expanded");
+        }
+
+        // JavaScript to handle the header moving up and leaving a blue bar
+        window.onscroll = function() {moveHeaderOnScroll()};
+
+        function moveHeaderOnScroll() {
+            var header = document.getElementById("sticky-header");
+            var scrollDistance = window.pageYOffset;
+            var maxMove = 90; // Adjust this value for how much the header should move up
+            var newTop = -Math.min(scrollDistance, maxMove);
+            header.style.top = newTop + "px";
+        }
+    </script>
+</head>
+<body>
+    <!-- Thin blue bar that stays at the top -->
+    <div id="blue-bar"></div>
+
+    <!-- Sticky header bar with only the title -->
+    <div id="sticky-header">
+        <h1>reflection</h1>
+    </div>
+
+    <!-- Portfolio navigation buttons -->
+    <div class="nav-buttons">
+        <a href="index.html" class="button">home</a>
+        <a href="blog.html" class="button">about me</a>
+        <a href="portfolio.html" class="button">assignments</a>
+        <a href="sessions.html" class="current button">reflection</a>
+
+    </div>
+
+    <!-- Portfolio Callout Box -->
+    <div class="about-box">
+
+        <p><br>
+In here, I will put the assignments that we get per session.
+            </p><br>
+    </div>
+    </p>
+
+    <!-- Portfolio container -->
+    <div class="portfolio-container">
+        <!-- Bee 'n Bee Hotel -->
+        <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+            <h2>reflective questions</h2>
+            <div class="portfolio-content">
+                <p><b>Date:</b> 25-2-2025</p><br>
+                <p>
+                  <b>Tinkering is widely associated with trial-and-error and brainstorming.  Find dictionary definitions of the three techniques, and compare them. Does the definition of tinkering match the definition we have in the course? Also, ask a generative AI tool for the definitions and differences. Which aspects does the answer provided miss?</b><br>
+My answer
+
+<br><br><b>Can you take a typical I-Tech related project case, list and explain 5 technical hurdles? To which extent do they allow for a 'playful' approach in tackling them? Please give arguments.</b><br>
+My answer
+
+<br><br><b>Where would you go hunting for tinkerspiration? List 5 physical and 5 online resources valuable for an I-Tech specialist. In which did you already find inspiration for a project you did or that got on your bucket list?</b><br>
+My answer
+
+<br><br><b>List 5 domains, challenges or settings in which you would like to apply tinkering, and explain why. Can you identify some sweet spots, (perhaps beyond the well-known such as STEM education) and can you also define some limitations? Are there 'untinkerable' domains?</b><br>
+My answer
+
+                <br><br>
+              </p>
+
+                <!-- <div class="row">
+      <div class="column">
+        <img src="img/kar.JPG" height="400px">
+      </div>
+      <div class="column">
+        <img src="img/kar2.JPG" height="400px">
+      </div>
+     </div> -->
+   </div>
+  </div>
+  </div>
+
+    <!-- <div class="portfolio-container">
+        <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+            <h2>ring</h2>
+            <div class="portfolio-content">
+                <p><b>Date:</b> Somewhere in 2020</p><br>
+                <p>I'm a big fan of The Lord of the Rings, and one day wanted to make a ring myself. So I got a nut in the shed, some sanding paper, files and metal saws and got working. Making the ring took around 20 hours, and I still wear it to this day.
+                <br><br>  <div class="row">
+      <div class="column">
+        <img src="img/bolt.JPG" height="400px">
+      </div>
+      <div class="column">
+        <img src="img/ring.JPG" height="400px">
+     </div>
+    </div>
+   </p>
+  </div>
+ </div> -->
+</div>
+</body>
+</html>
