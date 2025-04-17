@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <title>group work</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sticky header with blue bar effect */
+        #sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #230DBD;
+            /* border-bottom: 3px solid blue; */
+            transition: top 0.06s ease;
+            z-index: 1000;
+        }
+
+        #sticky-header h1 {
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Blue bar that remains at the top */
+        #blue-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            /* background-color: blue; */
+            z-index: 999;
+        }
+    </style>
+    <script>
+        // Function to toggle the expansion of portfolio items
+        function togglePortfolioItem(element) {
+            element.classList.toggle("expanded");
+        }
+
+        // JavaScript to handle the header moving up and leaving a blue bar
+        window.onscroll = function() {moveHeaderOnScroll()};
+
+        function moveHeaderOnScroll() {
+            var header = document.getElementById("sticky-header");
+            var scrollDistance = window.pageYOffset;
+            var maxMove = 90; // Adjust this value for how much the header should move up
+            var newTop = -Math.min(scrollDistance, maxMove);
+            header.style.top = newTop + "px";
+        }
+    </script>
+</head>
+<body>
+    <!-- Thin blue bar that stays at the top -->
+    <div id="blue-bar"></div>
+
+    <!-- Sticky header bar with only the title -->
+    <div id="sticky-header">
+        <h1>group work</h1>
+    </div>
+
+    <!-- Portfolio navigation buttons -->
+    <div class="nav-buttons">
+        <a href="index.html" class="button">home</a>
+        <a href="blog.html" class="button">about me</a>
+        <a href="portfolio.html" class="button">assignments</a>
+        <a href="sessions.html" class="button">reflection</a>
+        <a href="group.html" class="current button">group work</a>
+
+
+    </div>
+
+    <!-- Portfolio Callout Box -->
+    <div class="about-box">
+
+        <p><br>
+This page will showcase all the things we did in our group!
+            </p><br>
+    </div>
+    </p>
+
+    <!-- Portfolio container -->
+    <div class="portfolio-container">
+        <!-- Bee 'n Bee Hotel -->
+        <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+            <h2>session 2 - tinkering kits</h2>
+            <div class="portfolio-content">
+                <p> During week 2, I was sadly not in Enschede. However, thanks to the power vested in us through Discord, I was able to follow some parts of the lecture. And since I was not able to perform the hands-on activities, I was allowed to take notes and document what we were doing. <br><br>
+
+<img src="img/meeting1.jpg" width=50%><br><br>
+
+<b>The cardboard robot workshop </b><br><br>
+We got some cardboard, three servos and a load of those plush metal wires. Of course, as all reasonable people would argue, the first thing that came to mind was to make a raccoon. <br><br>
+The idea was simple: make a standing raccoon that could turn its feet. The raccoon existed of a simple cardboard body on a baseplate, with the arms/feet being separate flat cardboard parts. The servos would be connected to the feet and a baseplate, and thus the raccoon could move its feet. <br><br>
+While Door was bravely cutting cardboard with a (rather small) pair of scissors, Suzanne got busy with making the feet. Holes were punctured into the arms for the servos and were therefore the axes of rotation. Linde was busy with making a beautiful and colourful tail for our raccoon friend. <br><br>
+ Split pens were used to stick the servos to the cardboard baseplate, and some fun features were drawn on the cardboard with a sharpie. Door managed to weaponize herself with a glue gun and got to work with sticking all cardboard pieces together, creating the body. <br><br>
+The final result was, as one might have guessed, absolutely gorgeous. Our raccoon was so happy, waving its little cardboard feet to anyone passing by. <br><br>
+Then, Door brutally decapitated him... <br><br>
+
+
+  <div class="row">
+      <div class="column">
+        <img src="img/raccoon.png" width=70%>
+      </div>
+      <div class="column">
+        <img src="img/raccoon2.png" width=100%>
+      </div>
+     </div>
+
+<br><br><p>
+     <b>BYOR</b><br><br>
+      We were given a box of BYOR, after which we could do with it whatever we want…<br><br>
+     <i>No objective. <br><br>
+     No task. <br><br>
+     No instructions. <br><br>
+     …<br><br><br>
+     Now this is tinkering<br><br></i>
+
+     Suzanne started with taking out all the stuff and reviewing and take stock of what we had. Door was staring at the instructions and all the parts. We were all quite enthusiastic about the stuff, but a bit confused about what we were supposed to do. But we can absolutely entertain ourselves with it and just mess around. <br><br>
+     Door and Suzanne used their magical tech-wizard skills and quickly managed to control a moving thing with a turning thing. Yes, that is the clearest way it could be described. <br><br>
+     Then, Linde has discovered the microphone and Suzanne took out the speaker. The two were combined, and now we had a speaker that made a sound like it was screaming, dying and begging for their life. <br><br>
+     After a while, all the parts were taken out of the box. And of course, we wanted there to be chaos. So, we decided to make an installation using all of the parts. Thus, we made the following: <br>
+     We got a turning button. This was connected to a light and influenced it with different levels of brightness. This brightness was recorded using a light sensor, of which the output controlled the buzzer. The sound coming from the buzzer was recorded by a microphone, and the value of its measured loudness controlled the servomotor. A distance-sensor was placed above the servomotor, so the blade of the servomotor was either right in front of the distance sensor or out of its sensor field. This created a sort of Boolean value, which then turned on the stepper motor. <br><br>
+
+     It was one big chain reaction that should never have been created. But that is what CreaTe and I-Tech students are good at. <br><br>
+
+     <div style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
+   <img src="img/chaos.jpg" style="height: 400px; object-fit: cover;">
+   <video controls muted style="height: 400px;">
+     <source src="img/fish.mp4" type="video/mp4">
+   </video>
+ </div><br><br>
+
+
+      
+     <p><b>Arduino Grove Sensor Kit</b><br><br>
+     We opened the box, and it showed a sort of platform with ports for all sorts of cables.
+     It looked very nice, if you know about cables. Or whatever this thing was supposed to be. <br>
+     We were all wondering what to do with it. Door plugged in some cables into her laptop. Tjeerd was fed the delicious data on his screen that he couldn’t make out. <br><br>
+
+     It was very overwhelming; this was even supposed to be an introductory kit for kids. The term “What if we…” was passed around quite a lot. Door was confused. Suzanne was overwhelmed. Linde was both overwhelmed as confused. And Tjeerd was distracted by a bird outside. <br><br>
+     A light sensor was taken out and connected to the Arduino and laptop.
+     We assumed there to be a manual in there. Apparently, there was a QR code with instructions. <br><br>
+     Suddenly, there was light!
+     When you held, turned and released a button a certain degrees, a light started and stopped flickering. We never figured out the kit. Learning Arduino the normal way is easier than using this kit developed and meant to make it easier to learn Arduino. <br><br>
+      
+     <b>Makedo</b><br><br>
+     We were very hyped when we realised we got to work with cardboard. <br><br>
+     The kit was basically a <i>How to Creative with Cardboard</i>. We got all sorts of tools that made it easier to work with cardboard, such as a mini saw/knife, screwdriver and screws. Suzanne quickly made a flower with a screwdriver. The kit looked fun: cardboard is already quite easy to work with, but this made it even easier. It’s like how you got tools for woodworking, but then for just cardboard. <br><br>
+     But while fun, the kit did feel kind of useless. Suzanne said she prefers split pens over the screws. You can’t rotate the carboard parts attached with a screw anymore, since it then just detaches. It is good if you want to make something permanent or for playing. It is good for kids, they’ll have a fun time. But it is not great for tinkering. <br><br>
+     Cardboard is already great for prototyping, and it doesn’t really serve a purpose for that. <br><br>
+     Suzanne figured out a way to have the screws be constantly rotating. She cut a slit in the cardboard, so it could not detach when turning. So, she managed to overcome an issue this kit brings. Somewhere at the end, we discovered what we called “the murder hole”. This was a pin that can be used to puncture a hole in the cardboard so that it was easier to insert the screws. <br><br>
+     Suzanne made a tower of screws. It was clear that this kit was not that great, and we got bored of it quite quickly. We would have liked a pair of scissors, some tape or split pens more than this. <br><br>
+     <img src="img/tower.png" width=40%>
+     <br><br>
+   </p>
+  </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Portfolio container -->
+<div class="portfolio-container">
+    <!-- Bee 'n Bee Hotel -->
+    <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+        <h2>brainstorming</h2>
+        <div class="portfolio-content">
+            <p>For the first brainstorming session, we were tasked with coming up with 3 ideas and pitch them the next week. The tinkering session had to be aimed at I-Tech students. Door, being the only I-Tech student among us, was thus the “reference point” for our audience. <br><br>
+We thought of what topics we were all interested in and wanted to learn more about. Door introduced the topic of Foley and sound design, since she was currently following a course on that topic. Me, being interested in film, music and sound design (as well as having been a TA for Sound Engineering) was also very interested in that topic. Suzanne introduced the topic of soft robotics, and mentioned a satellite which was able to fold its solar panels, like origami. This inspired us to dive into the topic of origami-based soft robotics. Both Suzanne and me being big fans of 3D printing thought of a workshop about 3D printing, especially about the concept of working with layers. These ideas were worked out into a short pitch. The group told me to go wild with animations and transitions and told me I could do what I want for the pitch, as long as it got the point across. <br><br>
+
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Portfolio container -->
+<div class="portfolio-container">
+    <!-- Bee 'n Bee Hotel -->
+    <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+        <h2>pitches</h2>
+        <div class="portfolio-content">
+            <p>The week thereafter, we pitched our three ideas. <br><br>
+              <ul style="font-family: 'Patrick Hand', sans-serif;" class="tinker-list">
+                <li>For the origami workshop, we thought of having a small group and introduce them to some principles of origami, for instance how to fold some basic structures that can move. The idea was to then facilitate the group with paper, balloons and pumps and let them create their own moving “breathing” thing. In the end, they will present each other their creations.</li>
+                <li>The workshop about foley design was supposed to have people tinker with sound effects. The idea was to have a short video without sound, and let the participants then create sounds and edit them under the video. We would provide them with all sorts of materials, such as pans, pots, buckets, plastic foil, metal strips, anything that makes a sound. To stimulate some creativity, we were thinking of using a cartoon or drawn video, so that people are not limited to sounds effects that would only occur in the real world.</li>
+                <li>With the 3D printing workshop, we wanted to teach people to think in layers when 3D printing and focus on the structural integrity for functional prints. We would facilitate them with a material that can easily be cut and glued, while also being sturdy. We were thinking of soft packaging foam. The assignment was to build a structure like a bridge that required them to think of, for instance, overhangs or bridging.</li>
+              </ul><p>
+Of these three ideas, we decided to continue with the workshop about origami-based robotics. The reason was since it was the topic with the most possibility for exploration. With the other topics, we would be limiting the participants too much and not leave enough space for tinkering. We also decided to not use balloons and pumps, since movement caused by these materials would take away the originality of origami. You would simply be moving paper with balloons, instead of having movement caused by origami structures.
+<br>
+<div class="row">
+  <div class="column">
+    <img src="img/SR.png" width="100%" style="border: 1px solid black;">
+  </div>
+  <div class="column">
+    <img src="img/SEF.png" width="100%" style="border: 1px solid black;">
+  </div>
+  <div class="column">
+    <img src="img/3DP.png" width="100%" style="border: 1px solid black;">
+  </div>
+</div>
+<br><br>
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Portfolio container -->
+<div class="portfolio-container">
+    <!-- Bee 'n Bee Hotel -->
+    <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+        <h2>designing the workshop</h2>
+        <div class="portfolio-content">
+            <p>We had thought of the workshop in two parts: in the first part we would introduce the participants to origami robotics and show them the basic origami techniques for movement, and in the second part we would give them the materials and let them try to make their own origami robot. The goal we would give them was to move a ball with help of origami. <br><br>
+Since we abandoned the idea of using balloons and air pumps, we needed another movement-enabler for the origami. Suzanne came up with the idea of using pre-programmed servo’s, which sounded like a nice idea. Combined with string, we thought that would be a good idea. <br><br>
+Then we had to actually come up with the origami building blocks that we were going to teach to the participants. We wanted a few building blocks that could be used to make a moving robot, but would also allow people to experiment with the principles of movement using origami. <br><br>
+This was quite a difficult part, and took one full morning and afternoon to make. Eventually we came up with a butterfly, a crane and a walker. These sessions were quite fun, since we just tinkered a bit with origami ourselves. Eventually, I came up with a pretty simple walker, which Suzanne managed to get moving with servo’s and Door drew some eyes on it. <br><br>
+We created some instructions, asked people to be our participants, booked a room in the DesignLab and the workshop could begin! <br><br>
+<br>
+<video controls width="25%" muted>
+<source src="img/walk.mp4" type="video/mp4">
+</video>
+<video controls width="25%" muted>
+<source src="img/peck.mp4" type="video/mp4">
+</video>
+
+<br><br>
+
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<!-- Portfolio container -->
+<div class="portfolio-container">
+    <!-- Bee 'n Bee Hotel -->
+    <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+        <h2>user testing</h2>
+        <div class="portfolio-content">
+            <p>For the user testing, we managed to get four people enthusiastic to the workshop. We started with giving them a quick presentation on what the goal would be, and showed them some origami principles and patterns. We allowed them to follow the pattern of the pecking bird and showed them how this origami structure can be moved. During the worshop, we let the instructions of our origami structures and patterns show on the screen, and mentioned that they were allowed to both look at our patterns as look up other patterns online.<br><br>
+We decided not to show our own solution/walking robot, since we did not want to influence them to make the same: we wanted them to come up with their own ideas and tinker. Providing them with paper, cardboard, split pens, servo’s, scissors, thread and glue, we let them go wild. <br><br>
+The idea that the users came up with was quite surprising. They looked up a pattern of a frog online, and all decided to make one. Now, having four frogs and after a bit of play, they thought that they could use a servo to let a frog jump on the ball to move it. And they succeeded! <br><br>
+The feedback we received was that the participants were a bit confused about what they were allowed to do. We realised this issue and thought it would be clever to implement a bit of rules at the beginning. <br><br>
+
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
+<img src="img/usertest.JPG" style="height: 400px; object-fit: cover;">
+<video controls muted style="height: 400px;">
+  <source src="img/frogjump.mp4" type="video/mp4">
+</video>
+</div><br><br>
+
+
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="portfolio-container">
+    <div class="portfolio-item" onclick="togglePortfolioItem(this)">
+        <h2>the demo</h2>
+        <div class="portfolio-content">
+            <p>Eventually, it was time to set up the demo of our workshop. While I did have to miss half of this session due to presentations for another course happening at the same time, we decided to have a trimmed version of our workshop. Instead of having to move a ball, the goal was to have a pecking bird pattern move as a result of the servo. Suzanne managed to connect a servo to a potentiometer, so that the servo followed its rotation. On a laptop, we showed the instructions for the pecking bird, and people were able to fold one themselves. When they had done so, they could try to add a servo so that the origami structure was moving because of the servo. People seemed to like being able to hold and inspect the example pecking bird and making it move with their hands. <br><br>
+All in all, while the user testing resulted in a different outcome than we had expected, we did manage to create a fun and engaging workshop and tinkering experience.
+<br><img src="img/demo.JPG" width="50%">
+
+
+<br><br>
+
+
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+
+
+</body>
+</html>
