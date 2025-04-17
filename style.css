@@ -4,6 +4,28 @@ body {
     text-align: center;
     margin: 0;
     background-color: #f4f4f9; /* Light background for better contrast */
+    padding-top: 20px;
+}
+
+
+/* Specific styling for the lists to ensure consistent font and left alignment */
+.tinker-list {
+    text-align: left; /* Align the list to the left */
+    font-family: 'Patrick Hand', sans-serif; /* Same font as general text */
+    color: #0; /* Match the font color to general text */
+    margin: 0 auto; /* Center the list horizontally */
+    max-width: 80%; /* Limit the width to prevent text from stretching too far */
+}
+
+.tinker-list li {
+    font-size: 1.2em; /* Same font size as general text */
+    line-height: 1.5; /* Space out the list items for readability */
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+/* Hide the number on the last item of the list */
+.tinker-list li.no-number {
+    list-style-type: none; /* Removes the number */
 }
 
 /* Sticky Header */
@@ -118,12 +140,12 @@ body {
 /* Portfolio Title and Content Styling */
 .portfolio-item h2 {
     font-size: 1.5em;
-    color: #333;
+    color: #0;
 }
 
 .portfolio-item p {
     font-size: 1.2em;
-    color: #555;
+    color: #0;
 }
 
 /* Responsive Behavior: Stacking items on smaller screens */
@@ -133,6 +155,94 @@ body {
     }
 }
 
+.container {
+    display: flex; /* Create a flex container */
+    justify-content: space-between; /* Space out the text and image */
+    align-items: flex-start; /* Align the items at the top */
+    gap: 20px; /* Add some space between the text and image */
+    margin: 20px 0; /* Add some margin for spacing */
+    max-width: 100%; /* Ensure the container doesn't overflow */
+    box-sizing: border-box; /* Account for padding/borders in sizing */
+}
+
+.text-section {
+    flex: 1; /* Allow the text section to take up available space */
+    text-align: left; /* Align the text to the left */
+    max-width: 60%; /* Limit the width of the text section */
+    box-sizing: border-box; /* Account for padding/borders in sizing */
+}
+
+.image-section {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    max-width: 35%; /* Limit the width of the image section */
+    box-sizing: border-box; /* Account for padding/borders in sizing */
+}
+
+.tinker-list {
+    list-style-position: inside; /* Optional, for better alignment of the list items */
+    padding-left: 0; /* Remove default padding */
+}
+
+.tinker-list li {
+    font-size: 1.2em; /* Ensure the text is readable */
+    line-height: 1.5;
+    margin-bottom: 10px; /* Space between the list items */
+}
+
+.tinker-list li.no-number {
+    list-style-type: none; /* Removes the number on the last item */
+}
+
+img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners for the image */
+}
+.container {
+    display: flex; /* Create a flex container */
+    justify-content: space-between; /* Space out the text and image */
+    align-items: flex-start; /* Align the items at the top */
+    gap: 20px; /* Add some space between the text and image */
+    margin: 20px 0; /* Add some margin for spacing */
+    max-width: 100%; /* Ensure the container doesn't overflow */
+    box-sizing: border-box; /* Account for padding/borders in sizing */
+}
+
+.text-section {
+    flex: 1; /* Allow the text section to take up available space */
+    text-align: left; /* Align the text to the left */
+    max-width: 70%; /* 70% of the container width for text */
+    box-sizing: border-box; /* Account for padding/borders in sizing */
+}
+
+.image-section {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    max-width: 25%; /* 25% of the container width for the image */
+    box-sizing: border-box; /* Account for padding/borders in sizing */
+    position: relative;
+    left: -10%; /* Move the image a bit to the left */
+}
+
+.tinker-list {
+    list-style-position: inside; /* Optional, for better alignment of the list items */
+    padding-left: 0; /* Remove default padding */
+}
+
+.tinker-list li {
+    font-size: 1.2em; /* Ensure the text is readable */
+    line-height: 1.5;
+    margin-bottom: 10px; /* Space between the list items */
+}
+
+.tinker-list li.no-number {
+    list-style-type: none; /* Removes the number on the last item */
+}
+
+img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners for the image */
+}
 
 
 .portfolio-item.expanded {
@@ -210,6 +320,8 @@ a:hover {
     justify-content: center; /* Centers the columns horizontally */
     align-items: center; /* Aligns images vertically */
     gap: 20px; /* Adds spacing between images */
+      flex-wrap: wrap;
+      margin-top: 20px;
 }
 
 /* Ensuring columns adjust properly */
@@ -225,6 +337,21 @@ a:hover {
         width: 90%; /* Make the boxes take up more space on smaller screens */
     }
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust spacing between columns */
+  margin-top: 20px;
+}
+
+.column {
+  flex: 1 1 300px; /* Allow columns to resize responsively */
+  max-width: 500px; /* Optional: limit image stretch */
+  display: flex;
+  justify-content: center;
+}
+
 
 /* About Box Styling */
 .about-box {
